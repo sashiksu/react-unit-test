@@ -19,14 +19,14 @@ const User: FC<UserProps> = (props: UserProps) => {
   }, []);
 
   return (
-    <div>
-      <h1>User Info</h1>
+    <div data-testid="user-container">
+      <h1 data-testid="user-title">User Info</h1>
       {user ? (
         <p data-testid="user-name">
           {greetingText ? greetingText : "Hey!"} {user.name}
         </p>
       ) : (
-        <p>Loading...</p>
+        <p data-testid="user-loading">Loading...</p>
       )}
     </div>
   );
